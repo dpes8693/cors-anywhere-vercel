@@ -1,7 +1,7 @@
 // Listen on a specific host via the HOST environment variable
-var host = "https://cors-anywhere-vercel-n3ocbsvw6-dpes8693.vercel.app/" || '0.0.0.0';
+var host = process.env.HOST || '0.0.0.0';
 // Listen on a specific port via the PORT environment variable
-var port = 80 || 8080;
+var port = process.env.PORT || 8080;
 
 // Grab the blacklist from the command-line so that we can update the blacklist without deploying
 // again. CORS Anywhere is open by design, and this blacklist is not used, except for countering
